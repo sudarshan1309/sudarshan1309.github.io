@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
 
 </head>
 <body>
@@ -129,7 +130,17 @@
     
     </div>
 </section>
+<!-- calender -->
+<section>
+    <div class="calendar">
+        <!-- Loading stuff -->
+        Loading the data just for you.
+    </div>
+    
+</section>
 
+
+<!-- end calender -->
 <!-- demo -->
 <section class="services" id="services">
     <div class="max-width">
@@ -370,8 +381,23 @@
         Sudarshan.</span>
     </footer>
 
-  
+    <script
+    src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+  </script>
 
     <script src="script.js"></script>
+    <script>
+        GitHubCalendar(".calendar", "sudarshan1309");
+    
+        // or enable responsive functionality:
+        GitHubCalendar(".calendar", "sudarshan1309", { responsive: true });
+    
+        // Use a proxy
+        GitHubCalendar(".calendar", "sudarshan1309", {
+           proxy (username) {
+             return fetch(`https://your-proxy.com/github?user=${sudarshan1309}`)
+           }
+        }).then(r => r.text())
+    </script>
 </body>
 </html>
