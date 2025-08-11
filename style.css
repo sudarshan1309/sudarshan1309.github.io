@@ -254,10 +254,17 @@ header .container {
 }
 
 .logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  color: var(--primary);
+  display: inline-block;
 }
+
+.logo img {
+  height: 50px;              /* Adjust size */
+  background: white;         /* White background */
+  padding: 5px 10px;         /* Space around logo */
+  border-radius: 5px;        /* Slight rounded corners */
+  object-fit: contain;       /* Keeps aspect ratio */
+}
+
 
 header nav ul {
   list-style: none;
